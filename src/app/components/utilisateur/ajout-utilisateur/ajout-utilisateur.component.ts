@@ -31,7 +31,7 @@ export class AjoutUtilisateurComponent implements OnInit {
       adresse:'',
       email:'',
       password:'',
-      role:'agent',
+      role:'Agent',
     })
 
   }

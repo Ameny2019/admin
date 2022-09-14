@@ -29,13 +29,13 @@ export class ProductComponent implements OnInit {
 
 
     Swal.fire({
-      title: 'Are you sure?',
-      text: "You won't be able to revert this!",
+      title: 'etes vous sure?',
+      text: "La supression de cet élément est irreversible",
       icon: 'warning',
       showCancelButton: true,
       confirmButtonColor: '#3085d6',
       cancelButtonColor: '#d33',
-      confirmButtonText: 'Yes, delete it!'
+      confirmButtonText: 'Oui, Supprimer!'
     }).then((result) => {
       if (result.isConfirmed) {
 
@@ -44,8 +44,8 @@ export class ProductComponent implements OnInit {
         })
 
         Swal.fire(
-          'Deleted!',
-          'Your file has been deleted.',
+          'Supprimé!',
+          'element supprimé avec succés.',
           'success'
         )
       }
