@@ -28,7 +28,9 @@ export class FleursService {
     deleteEfleur(id: any){
       return this.http.delete(`${environment.baseURL}/efleur/DeleteEfleur/${id}`);
     }
-
+    updateEtatEfleur(id:any){
+      return this.http.get(`${environment.baseURL}/efleur/updateEtat/${id}`);
+    }
     getEfleursOui(){
       return this.http.get(`${environment.baseURL}/efleur/getOuiEtatProductEfleur`)
     }

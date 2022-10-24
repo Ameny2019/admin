@@ -15,6 +15,7 @@ export class UpdateEfleurComponent implements OnInit {
   formEfleur:FormGroup
   id:string=this.activated.snapshot.params['idEfleur'];
 
+  fileToUpload: Array<File> = [];
 
   constructor(private activated:ActivatedRoute,private formBuilder:FormBuilder,private router:Router,private efleureService:FleursService) { }
 
@@ -36,13 +37,17 @@ export class UpdateEfleurComponent implements OnInit {
       this.formEfleur.patchValue({
         nom:this.efleur.nom,
         description:this.efleur.description,
+        photo:this.efleur.photo,
         QunatityEfleurDisponible:this.efleur.QunatityEfleurDisponible
       })
       
     })
   }
-
-  add(){
+  handleFileInput(files: any) {
+    this.fileToUpload = <Array<File>>files.target.files;
+    console.log(this.fileToUpload)
+  }
+  update(){
 
     console.log("estamps is like :",this.formEfleur.value)
     this.efleureService.updateEfleur(this.formEfleur.value,this.id).subscribe(

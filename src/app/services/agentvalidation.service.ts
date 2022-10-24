@@ -1,25 +1,27 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
-export class AgentService {
+export class agentvalidationService {
 
   constructor(private http:HttpClient) { }
 
-  postAgent(agent : any){
-    return this.http.post(`${environment.baseURL}/user/CreateUser`,agent)
+
+  postAgentvalidation(agentvalidation : any){
+    return this.http.post(`${environment.baseURL}/user/CreateUser`,agentvalidation)
   }
  
 
-  getAgent(){
+  getagentvalidation(){
     return this.http.get(`${environment.baseURL}/user/GetallUsers`)
   }
  
 
-  deleteAgent(id:any){
+  deleteagentvalidation(id:any){
     return this.http.delete(`${environment.baseURL}/user/deleteUser/${id}`)
   }
 }
+

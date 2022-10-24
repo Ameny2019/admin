@@ -7,13 +7,11 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
-import { LayoutComponent } from './components/layout/layout.component';
-import { NavLayoutComponent } from './components/nav-layout/nav-layout.component';
+
 import { LoginComponent } from './components/login/login.component';
-import { RegistreComponent } from './components/registre/registre.component';
+
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { ListefleurComponent } from './components/efleur/listefleur/listefleur.component';
-import { ListestapmComponent } from './components/estamp/listestapm/listestapm.component';
+
 import { ListDemandeComponent } from './components/demandeProduit/list-demande/list-demande.component';
 import { AjoutDemandeComponent } from './components/demandeProduit/ajout-demande/ajout-demande.component';
 import { UpdateEstampComponent } from './components/estamp/update-estamp/update-estamp.component';
@@ -22,8 +20,10 @@ import { ProductComponent } from './components/product/product.component';
 import { AgentComponent } from './components/utilisateur/agent/agent.component';
 import { ClientComponent } from './components/utilisateur/client/client.component';
 import { AjoutUtilisateurComponent } from './components/utilisateur/ajout-utilisateur/ajout-utilisateur.component';
-import { ListefleurOuiComponent } from './components/efleur/listefleur-oui/listefleur-oui.component';
-import { ListestapmOuiComponent } from './components/estamp/listestapm-oui/listestapm-oui.component';
+import { ListcommandesComponent } from './components/listcommandes/listcommandes.component';
+import { AgentvalidationComponent } from './components/utilisateur/agentvalidation/agentvalidation.component';
+
+
 
 @NgModule({
   declarations: [
@@ -31,12 +31,10 @@ import { ListestapmOuiComponent } from './components/estamp/listestapm-oui/liste
     HomeComponent,
     NavbarComponent,
     SidebarComponent,
-    LayoutComponent,
-    NavLayoutComponent,
+
     LoginComponent,
-    RegistreComponent,
-    ListefleurComponent,
-    ListestapmComponent,
+
+   
     ListDemandeComponent,
     AjoutDemandeComponent,
     UpdateEstampComponent,
@@ -45,8 +43,10 @@ import { ListestapmOuiComponent } from './components/estamp/listestapm-oui/liste
     AgentComponent,
     ClientComponent,
     AjoutUtilisateurComponent,
-    ListefleurOuiComponent,
-    ListestapmOuiComponent
+    ListcommandesComponent,
+    AgentvalidationComponent,
+    
+ 
   ],
   imports: [
     BrowserModule,

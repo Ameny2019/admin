@@ -71,8 +71,9 @@ this.getfleurs();
   getfleurs() {
     this.fleurservice.getEfleursNon().subscribe(
       (res: any) => {
-        this.fleurs = res;
         console.log("fleur:", res)
+        this.fleurs = res;
+
       }
     )
   }
@@ -170,14 +171,21 @@ this.getfleurs();
         productId:efleur._id,
         efleur:efleur._id,
         price:text,
-        producType:"efleur"
+        photo:efleur.photo,
+        producType:"efleur",
       }
 
       this.productService.postproduct(efleurProduct).subscribe((res:any) => {
         console.log("product is :",res);
         this.getfleurs();
         //Swal.fire(res.data)
-
+       
+        // sera supprimé aprés la validation 
+    
+this.fleurservice.updateEtatEfleur(efleur._id).subscribe((res:any)=>{
+  console.log("res is :",res);
+  this.getfleurs();
+})
       })
     }
 
